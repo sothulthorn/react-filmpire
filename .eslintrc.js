@@ -20,6 +20,8 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'import/no-extraneous-dependencies': 'off',
+    'comma-dangle': 'off',
     'import/extensions': 0,
     'react/prop-types': 0,
     'linebreak-style': 0,
@@ -48,6 +50,10 @@ module.exports = {
         specialLink: ['to', 'hrefLeft', 'hrefRight'],
         aspects: ['noHref', 'invalidHref', 'preferButton'],
       },
+    ],
+    'react/function-component-definition': [
+      2,
+      { namedComponents: ['arrow-function', 'function-declaration'] },
     ],
   },
 };
