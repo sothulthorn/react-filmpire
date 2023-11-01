@@ -14,9 +14,10 @@ const App = () => (
       <DivToolBar />
       <Routes>
         <Route path="/" element={<Movies />} />
+        <Route path="/approved" element={<Movies />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/movie/:id" element={<MovieInformation />} />
-        <Route path="/actor/:id" element={<Actors />} />
+        <Route path="/actors/:id" element={<Actors />} />
       </Routes>
     </MainContent>
   </DivRoot>
