@@ -35,7 +35,9 @@ const Sidebar = ({ setMobileOpen }) => {
     (state) => state.currentGenreOrCategory
   );
 
-  console.log(data);
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [genreIdOrCategoryName]);
 
   return (
     <>
