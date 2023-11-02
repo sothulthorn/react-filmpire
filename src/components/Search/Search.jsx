@@ -3,7 +3,7 @@ import { TextField, InputAdornment } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { SearchContainer, Input } from './Search.styles';
+import { SearchContainer, SearchInput } from './Search.styles';
 import { searchMovie } from '../../features/currentGenreOrCategory';
 
 const Search = () => {
@@ -21,13 +21,12 @@ const Search = () => {
 
   return (
     <SearchContainer>
-      <TextField
+      <SearchInput
         onKeyDown={handleKeyPress}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         variant="standard"
         InputProps={{
-          className: Input,
           startAdornment: (
             <InputAdornment position="start">
               <SearchIcon />

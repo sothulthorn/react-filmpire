@@ -1,4 +1,5 @@
 import { styled } from '@mui/system';
+import { TextField } from '@mui/material';
 
 const SearchContainer = styled('div')(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
@@ -8,7 +9,7 @@ const SearchContainer = styled('div')(({ theme }) => ({
   },
 }));
 
-const Input = styled('div')(({ theme }) => ({
+const SearchInput = styled(TextField)(({ theme }) => ({
   color: theme.palette.mode === 'light' && 'dark',
   filter: theme.palette.mode === 'light' && 'invert(1)',
   [theme.breakpoints.down('sm')]: {
@@ -17,4 +18,4 @@ const Input = styled('div')(({ theme }) => ({
   },
 }));
 
-export { SearchContainer, Input };
+export { SearchContainer, SearchInput };
